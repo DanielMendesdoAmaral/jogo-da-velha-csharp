@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Desafio - Jogo da velha/1.0.0": {
+        "runtime": {
+          "Desafio - Jogo da velha.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Desafio - Jogo da velha/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
