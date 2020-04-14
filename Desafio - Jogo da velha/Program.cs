@@ -270,12 +270,17 @@ namespace Jogo_da_Velha
                                     ganhou = "X";
                                     break;
                                 }
+                                else if ((velha[1] != "1") && (velha[2] != "2") && (velha[3] != "3") && (velha[4] != "4") && (velha[5] != "5") && (velha[6] != "6") && (velha[7] != "7") && (velha[8] != "8") && (velha[9] != "9"))
+                                {
+                                    ganhou = "E";
+                                    break;
+                                }
 
                                 //O BLOCO ABAIXO CRIA OS JOGOS DE O
                                 System.Console.WriteLine("\n \n");
                                 do
                                 {
-                                    System.Console.Write(playerX + ", você quer jogar X em qual posição? ");
+                                    System.Console.Write(playerO + ", você quer jogar O em qual posição? ");
                                     jogo = Int32.Parse(Console.ReadLine());
                                     if ((jogo <= 0) || (jogo >= 10))
                                     {
@@ -417,7 +422,12 @@ namespace Jogo_da_Velha
                                     ganhou = "O";
                                     break;
                                 }
-                            } while ((ganhou != "X") && (ganhou != "O"));
+                                else if ((velha[1] != "1") && (velha[2] != "2") && (velha[3] != "3") && (velha[4] != "4") && (velha[5] != "5") && (velha[6] != "6") && (velha[7] != "7") && (velha[8] != "8") && (velha[9] != "9"))
+                                {
+                                    ganhou = "E";
+                                    break;
+                                }
+                            } while ((ganhou != "X") && (ganhou != "O") && (ganhou != "E"));
                             System.Console.Clear();
                             if (ganhou == "X")
                             {
@@ -463,6 +473,20 @@ namespace Jogo_da_Velha
                                     Console.Clear();
                                 } while ((opcao != 1) && (opcao != 0));
                             }
+                            else if (ganhou == "E")
+                            {
+                                System.Console.WriteLine("                                                                                 EMPATE!!! \n");
+                                System.Console.WriteLine("                                                                                 _____________________________");
+                                System.Console.WriteLine("                                                                                 | [1] Jogar denovo          |");
+                                System.Console.WriteLine("                                                                                 | [0] Sair                  |");
+                                System.Console.WriteLine("                                                                                 _____________________________");
+                                System.Console.Write("                                                                                 ");
+                                do
+                                {
+                                    opcao = Int32.Parse(Console.ReadLine());
+                                    Console.Clear();
+                                } while ((opcao != 1) && (opcao != 0));
+                            }
                             ganhou = "Void";
                         } while (opcao == 1);
                     }
@@ -479,4 +503,3 @@ namespace Jogo_da_Velha
         }
     }
 }
-
